@@ -3,10 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Mixed content error solution -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
     <title>@ViewData["Title"] - Noticeboard</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Noticeboard.styles.css" asp-append-version="true" />
+    <!-- include summernote css-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -45,6 +51,10 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- include summernote js-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.js"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
