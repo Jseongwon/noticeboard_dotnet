@@ -56,7 +56,7 @@ namespace Noticeboard.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Title,Content,CreatedUtc")] NoticeBoard noticeBoard)
+        public async Task<IActionResult> Create([Bind("ID,Title,Content")] NoticeBoard noticeBoard)
         {
             if (ModelState.IsValid)
             {
